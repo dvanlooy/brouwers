@@ -128,14 +128,12 @@ label span:empty, .fout:empty {
 }
 
 .zonderbolletjes {
-	list-style: none;
-	margin-bottom: 0.2em;
-	padding: 0;
+	margin-left: 0;
+	list-style-type: none;
 }
 
 .zonderbolletjes li {
 	display: inline;
-	margin-right: 0.2em;
 }
 
 .fullwidth {
