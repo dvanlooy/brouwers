@@ -104,5 +104,20 @@
 			<artifactId>spring-data-jpa</artifactId>
 			<version>[1.9,]</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>[2.6.3, 2.6.99]</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.hateoas</groupId>
+			<artifactId>spring-hateoas</artifactId>
+			<version>[0,]</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.plugin</groupId>
+			<artifactId>spring-plugin-core</artifactId>
+			<version>[1.2,]</version>
+		</dependency>
 	</dependencies>
 </project>
