@@ -1,6 +1,7 @@
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <%@taglib prefix='fmt' uri='http://java.sun.com/jsp/jstl/fmt'%>
+<%@taglib prefix='spring' uri='http://www.springframework.org/tags'%>
 <%@taglib prefix='v' uri='http://vdab.be/tags'%>
 <!doctype html>
 <html lang='nl'>
@@ -39,13 +40,16 @@ td:first-child, td:last-child {
 		</thead>
 		<tbody>
 			<c:forEach items='${page.content}' var='brouwer'>
+				<spring:url value='/weer/{plaats}/temperatuur' var='temperatuururl'>
+					<spring:param name='plaats' value='${brouwer.adres.gemeente}' />
+				</spring:url>
 				<tr>
 					<td class='rechts'>${brouwer.id}</td>
 					<td>${brouwer.naam}</td>
 					<td>${brouwer.adres.straat}</td>
 					<td>${brouwer.adres.huisNr}</td>
 					<td>${brouwer.adres.postcode}</td>
-					<td>${brouwer.adres.gemeente}</td>
+					<td>${brouwer.adres.gemeente}&nbsp;<a href='${temperatuururl}'>temperatuur</a></td>
 					<td class='rechts'><fmt:formatNumber value='${brouwer.omzet}' /></td>
 				</tr>
 			</c:forEach>
